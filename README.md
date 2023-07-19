@@ -21,6 +21,12 @@ We use the Pythia `main89` example for merging with
 CKKW-L to produce merged, showered predictions for W+jets
 according to the above analysis.
 
+First unzip the LHE files with:
+
+```
+gunzip madgraph*lhe*gz
+```
+
 The configurations can be used by adding the directory
 containing the `main89` executable to your `$PATH` variable
 and running (in the base directory of this repository):
