@@ -45,6 +45,15 @@ TimeShower:QEDshowerByL   = off ! on
 TimeShower:QEDshowerByOther = off ! on
 TimeShower:QEDshowerByGamma = off ! on
 
+TimeShower:pTmaxMatch       = 1
+SpaceShower:pTmaxMatch      = 1
+
+! Set renormalisation / factorisation scales of the 2->2 process
+Merging:muFac               = 91.188
+Merging:muRen               = 91.188
+Merging:muFacInME           = 91.188
+Merging:muRenInME           = 91.188
+
 ! Subruns for CKKW-L merging.
 LHEFInputs:nSubruns       = 3
 
