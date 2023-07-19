@@ -7,6 +7,10 @@ Pythia 8.309
 
 MadGraph5 3.4.2
 
+HepMC 3.02.04
+
+Rivet 3.1.6
+
 # Instructions
 
 The compressed LHE files were produced with MadGraph5
