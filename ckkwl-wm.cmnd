@@ -1,0 +1,61 @@
+! main89ckkwl.cmnd
+
+! Tell Pythia that LHEF input is used
+Beams:frameType             = 4
+
+! Shower options
+HadronLevel:all            = off ! on
+PartonLevel:MPI            = off ! on
+
+! Use all events in LHE files
+Main:numberOfEvents = 10000
+
+! Core process for merging
+Merging:Process            = pp>LEPTONS,NEUTRINOS
+
+! Maximal number of additional jets.
+Merging:nJetMax            = 2
+
+! Jet-separation merging
+Merging:doKTMerging        = on
+Merging:ktType             = 1
+Merging:Dparameter         = 0.4
+Merging:TMS                = 30
+
+! Do not include rapidity ordering (not necessary!)
+SpaceShower:rapidityOrder = off
+
+! Suppress Pythia output
+Init:showChangedParticleData     = off
+Init:showChangedSettings         = off
+Init:showMultipartonInteractions = off
+Init:showProcesses               = on
+Next:numberCount                 = 5000
+Next:numberShowEvent             = 0
+Next:numberShowInfo              = 0
+Next:numberShowLHA               = 0
+Next:numberShowProcess           = 0 ! 500000
+
+! Turn off onia and QED shower
+TimeShower:octetOniumFraction = 0;
+SpaceShower:QEDshowerByQ  = off ! on
+SpaceShower:QEDshowerByL  = off ! on
+TimeShower:QEDshowerByQ   = off ! on
+TimeShower:QEDshowerByL   = off ! on
+TimeShower:QEDshowerByOther = off ! on
+TimeShower:QEDshowerByGamma = off ! on
+
+! Subruns for CKKW-L merging.
+LHEFInputs:nSubruns       = 3
+
+! Subruns for CKKW-L merging Wm
+!--------------------------------------------------------------------
+Main:subrun               = 0   ! input for subrun, 0jwm
+Beams:LHEF                = madgraph_tree_0jwm.lhe
+!--------------------------------------------------------------------
+Main:subrun               = 1   ! input for subrun, 1jwm
+Beams:LHEF                = madgraph_tree_1jwm.lhe
+!--------------------------------------------------------------------
+Main:subrun               = 2   ! input for subrun, 2jwm
+Beams:LHEF                = madgraph_tree_2jwm.lhe
+!--------------------------------------------------------------------
