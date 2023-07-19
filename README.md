@@ -38,5 +38,5 @@ The final line calls `rivet-mkhtml` to plot the individual
 merged components for W+ and W-, as well as the combined
 result.
 
-A directory called `rivet-plots-w-test` will be created
-containing the analysis output.
+A directory called `rivet-plots-main89ckkwl-w-test` will
+be created containing the analysis output in HTML format.
